@@ -63,7 +63,7 @@ class CustomAdapter(val memoList: MutableList<Memo>) : RecyclerView.Adapter<Cust
         }
         //onBindViewHolder()를 통헤 몇번째 데이터를 꺼내서 넣을지 알수있다
         fun setMemo(memo: Memo) {
-            currentMemo = memo
+            currentMemo = memo //여기서 메모의 값을 받아온다(클릭 리스너)
             with(binding) {
                 textNo.text = "${memo.no}"
                 textTitle.text = "${memo.title}"
